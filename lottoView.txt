@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>로또 결과</h1>
+<hr>
+@Getter
+@Setter
+public class lottoVO {
+private int win = (int) (Math.random() * 6) + 1;
+private int num;
+private boolean result;
+private String msg;
+private String pic;
+private String pic2;
+
+public lottoVO() {
+}
+}
+<h2 th:text=${IoVO.msg}">
+    <img th:src="${IoVO>pic"><br>
+    <img th:src="${IOVO.pic}"><br>
+    <img th:src="@{IoVO.pic}"><br>
+    <th:block th:if="!${IoVO.result)">
+     <a th:href="${goback}">다시하기</a>
+    </th:block>
+</body>
+</html>

@@ -1,0 +1,47 @@
+package com.example.springlab.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@RequestMapping("/lotto")
+public String viewConnect1() {
+    return "lottoForm";
+}
+
+@RequestMapping("/lottoResult")
+public String viewConnect2(@RequestParam)
+    model.adfdAttribute("rand", (int) (Math.random)
+    model.addAttribute('num", vo.getNum());
+    return "lottoView"'))
+}
+/*@Controller
+public class LottoController {
+    @GetMapping("/lotto")
+    public String lotto(Model model) {
+
+
+        int rand = (int) (Math.random() * 6) + 1;
+        int[] lotto = new int[6];
+        return null;
+    }
+}*/
+//}
+//<form id="myForm" method="get" action="/lotto">
+//<input type="image" name="image" placeholder ="숫자를 입력하세요" required>
+//        for (int i = 0; i < lotto.length; i++) {
+//lotto[i] = (int)((Math.random() * 6) + 1);
+//        if (i == 0) {
+//        continue;
+//        }
+//
+//        for (int i = 0; i < todayLotto.length; i++) {
+//int rand = (int) (Math.random() * 6) + 1;
+//todayLotto[i] = rand;
+//                for (int j = 0; j < i; j++) {
+//        if (todayLotto[i] == todayLotto[j]) {
+//i--;
+//        break;
+//        }
